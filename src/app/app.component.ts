@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Personagem } from 'src/model/personagem';
+import { PERSONAGENS } from './database';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app-rm';
+
+  personagens = PERSONAGENS;
 }
