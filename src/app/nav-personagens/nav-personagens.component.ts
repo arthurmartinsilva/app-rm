@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PERSONAGENS } from '../database';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Personagem } from 'src/model/personagem';
+import { Observable } from 'rxjs';
+import { PersonagensService } from '../service/personagens.service';
 
 @Component({
   selector: 'app-nav-personagens',
@@ -10,17 +12,13 @@ import { Personagem } from 'src/model/personagem';
 })
 export class NavPersonagensComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  personagens$ : Observable<Personagem[]>;
 
-  personagens;
-
-  ngOnInit() {
-    //parametros para a chamada
-    //const params = new HttpParams().set("id","1");
-    //this.http.get('http://localhost:3000/personagens', {params}).subscribe(resp => this.personagens = resp)
-
-
-    this.http.get('http://localhost:3000/personagens').subscribe(resp => this.personagens = resp);
+  constructor(private persService: PersonagensService) { 
+    this.personagens$ = persService.getPersonagens();
+  }
+  
+  ngOnInit() {    
   }  
 
 }

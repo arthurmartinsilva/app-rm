@@ -1,1 +1,3 @@
-<app-personagem *ngFor="let personagem of personagens" [personagem]="personagem"></app-personagem>
+<div *ngIf="personagens$ | async as personagens">
+    <app-personagem *ngFor="let personagem of personagens" [personagem]="personagem"></app-personagem>
+</div>
