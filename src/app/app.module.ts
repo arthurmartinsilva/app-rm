@@ -4,6 +4,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { PersonagemComponent } from './personagem/personagem.component';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './router'
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { PersonagemComponent } from './personagem/personagem.component';
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
