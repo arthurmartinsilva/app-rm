@@ -9,6 +9,7 @@ import { ROUTES } from './router';
 import { NavPersonagensComponent } from './nav-personagens/nav-personagens.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PrincipalComponent } from './principal/principal.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PrincipalComponent } from './principal/principal.component'
   imports: [
     BrowserModule,
     NgbModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PERSONAGENS } from '../database';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Personagem } from 'src/model/personagem';
 
 @Component({
   selector: 'app-nav-personagens',
@@ -8,11 +10,17 @@ import { PERSONAGENS } from '../database';
 })
 export class NavPersonagensComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  personagens;
 
   ngOnInit() {
-  }
+    //parametros para a chamada
+    //const params = new HttpParams().set("id","1");
+    //this.http.get('http://localhost:3000/personagens', {params}).subscribe(resp => this.personagens = resp)
 
-  personagens = PERSONAGENS;
+
+    this.http.get('http://localhost:3000/personagens').subscribe(resp => this.personagens = resp);
+  }  
 
 }

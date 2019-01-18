@@ -1,26 +1,26 @@
 <ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">
-        <div *ngFor="let star of quantidadeEstrelas()" class="horizontal">
-          <img src="assets/star.png" class="favorito-estrela">
-        </div>
-      </h4>
-      <h4 class="modal-title" id="modal-basic-title"></h4>
-      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <h2>Nome: {{personagem.nome}}</h2>
-      <h6>Idade: {{personagem.idade}}</h6>
-      <h6>Profissão: {{personagem.profissao}}</h6>
-      <h6>Relacionamento: {{personagem.uniao}}</h6>
-      <h6>Primeira aparição: Episódio "{{personagem.aparicao.episodio.nome}}" ({{personagem.aparicao.episodio.ano}})</h6>
-      <img [src]="personagem.img">
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Sair</button>
-    </div>
-  </ng-template>
-  
-  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">{{personagem.nome}}</button>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">
+      <div *ngFor="let star of quantidadeEstrelas()" class="horizontal">
+        <img src="assets/star.png" class="favorito-estrela">
+      </div>
+    </h4>
+    <h4 class="modal-title" id="modal-basic-title"></h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h2>Nome: {{personagem.nome}}</h2>
+    <h6>Idade: {{personagem.idade}}</h6>
+    <h6>Profissão: {{personagem.profissao}}</h6>
+    <h6>Relacionamento: {{personagem.uniao}}</h6>
+    <h6>Primeira aparição: Episódio "{{personagem.aparicao.episodio.nome}}" ({{personagem.aparicao.episodio.ano}})</h6>
+    <img [src]="personagem.img">
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Sair</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">{{personagem.nome}}</button>
