@@ -1,0 +1,13 @@
+.center {
+    width: 50%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.img_home {
+    padding-top: 20px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}

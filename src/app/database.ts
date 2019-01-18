@@ -46,5 +46,37 @@ export const PERSONAGENS = [
         },
         favorito: false,
         star: 4        
+    },
+    {
+        id: 4,
+        img: "assets/jerry.png",
+        nome: "Jerry Smith",
+        idade: 34,
+        profissao: "Fracassado",
+        uniao: "Divorciado",
+        aparicao: {
+            episodio: {
+                nome: "Pilot",
+                ano: 2013
+            }
+        },
+        favorito: false,
+        star: 1        
+    },
+    {
+        id: 5,
+        img: "assets/summer.png",
+        nome: "Summer Smith",
+        idade: 17,
+        profissao: "Estudante",
+        uniao: "Hemorrhage",
+        aparicao: {
+            episodio: {
+                nome: "Pilot",
+                ano: 2013
+            }
+        },
+        favorito: false,
+        star: 4        
     }
 ]
