@@ -12,7 +12,8 @@ export const PERSONAGENS = [
                 ano: 2013
             }
         },
-        favorito: true
+        favorito: true,
+        star: 5
     },
     {
         id: 2,
@@ -27,7 +28,8 @@ export const PERSONAGENS = [
                 ano: 2013
             }
         },
-        favorito: true        
+        favorito: true,
+        star: 5      
     },
     {
         id: 3,
@@ -42,6 +44,7 @@ export const PERSONAGENS = [
                 ano: 2013
             }
         },
-        favorito: false        
+        favorito: false,
+        star: 4        
     }
 ]

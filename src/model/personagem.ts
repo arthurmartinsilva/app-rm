@@ -11,5 +11,6 @@ export interface Personagem {
             ano: number
         }
     },
-    favorito: boolean
+    favorito: boolean,
+    star: number
 }

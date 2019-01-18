@@ -25,6 +25,13 @@ export class PersonagemComponent implements OnInit {
   @Input()
   personagem: Personagem;
 
-  
+  quantidadeEstrelas(){
+    var arrayStar: Array<string> = []; 
+    var quantidadeEstrelas: number = this.personagem.star;
+    for(quantidadeEstrelas;quantidadeEstrelas>0;quantidadeEstrelas--){
+      arrayStar.push("stars");
+    }
+    return arrayStar;
+  }
 
 }
