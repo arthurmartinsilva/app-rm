@@ -10,6 +10,8 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
+  <button (click)="changeStar(true)" class="btn btn-success" type="button">+</button>
+  <button (click)="changeStar(false)" class="btn btn-danger" type="button">-</button>
   <div class="modal-body">
     <h2>Nome: {{personagem.nome}}</h2>
     <h6>Idade: {{personagem.idade}}</h6>

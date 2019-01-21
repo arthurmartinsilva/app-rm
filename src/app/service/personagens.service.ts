@@ -8,12 +8,16 @@ import { Observable } from 'rxjs';
 })
 export class PersonagensService {
 
-  constructor(private http: HttpClient) { 
-    
+  constructor(private http: HttpClient) {
+
   }
 
-  getPersonagens(): Observable<Personagem[]>{
+  getPersonagens(): Observable<Personagem[]> {
     return this.http.get<Personagem[]>('http://localhost:3000/personagens');
+  }
+
+  changeStar(pers: Personagem, star: number) {
+      return this.http.put(`http://localhost:3000/personagens/${pers.id}`, pers)
   }
 
 }
